@@ -1,26 +1,15 @@
 package com.serverless;
 
-import java.util.Collections;
-import java.util.Map;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
+import com.amazonaws.services.lambda.runtime.events.S3Event;
 
-public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayResponse> {
+import java.util.Map;
 
-	private static final Logger LOG = LogManager.getLogger(Handler.class);
+public class Handler implements RequestHandler<S3Event, String> {
 
-	@Override
-	public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) {
-		LOG.info("received: {}", input);
-		Response responseBody = new Response("Go Serverless v1.x! Your function executed successfully!", input);
-		return ApiGatewayResponse.builder()
-				.setStatusCode(200)
-				.setObjectBody(responseBody)
-				.setHeaders(Collections.singletonMap("X-Powered-By", "AWS Lambda & serverless"))
-				.build();
-	}
+    @Override
+    public String handleRequest(S3Event event, Context context) {
+        return "done";
+    }
 }
