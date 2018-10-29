@@ -1,0 +1,44 @@
+{{
+  "records": [{
+    "awsRegion": "ca-central-1",
+    "eventName": "ObjectCreated:Put",
+    "eventSource": "aws:s3",
+    "eventTime": {
+      "iMillis": 1540841593323,
+      "iChronology": {
+        "iBase": {
+          "iMinDaysInFirstWeek": 4
+        }
+      }
+    },
+    "eventVersion": "2.0",
+    "requestParameters": {
+      "sourceIPAddress": "207.164.161.66"
+    },
+    "responseElements": {
+      "xAmzId2": "4lX3ROB4FbOToyRfTmkVx86QfNU/Kr6RcEwqg6mA+H6aZH3bIEBFM6QLbtWyVfWijxGyinqn6hs=",
+      "xAmzRequestId": "CD9F263A1626E5BA"
+    },
+    "s3": {
+      "configurationId": "exS3-v2--5764b67ba7646aefeb30f132cf8536e1",
+      "bucket": {
+       "name": "test-bucket",
+        "ownerIdentity": {
+          "principalId": "A26CIYHGIKQJVJ"
+        },
+        "arn": "arn:aws:s3:::d365-import-bucket-501335966922"
+      },
+      "object": {
+        "key": "export/Screen+Shot+2018-08-07+at+1.02.22+PM.png",
+        "size": 18562,
+        "eTag": "e9e1449776444f756d4a4502b1c8b086",
+        "versionId": "",
+        "sequencer": "005BD76079473A463B"
+      },
+      "s3SchemaVersion": "1.0"
+    },
+    "userIdentity": {
+      "principalId": "AWS:AIDAIZWSMJDMKFR2GZOJI"
+    }
+  }]
+}
